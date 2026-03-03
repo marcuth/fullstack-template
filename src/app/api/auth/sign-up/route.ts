@@ -1,7 +1,8 @@
-import { signUpSchema } from "@/schemas/users/auth.schema"
-import { signUp } from "@/services/auth.service"
 import { NextResponse } from "next/server"
 import { ZodError } from "zod"
+
+import { signUpSchema } from "@/schemas/users/auth.schema"
+import { signUp } from "@/services/auth.service"
 
 export async function POST(request: Request) {
     try {

@@ -1,8 +1,9 @@
+import crypto from "node:crypto"
+
 import { Prisma, UserRole } from "@/generated/prisma/client"
 import { prisma } from "@/helpers/prisma.helper"
 import { SignUpValues } from "@/schemas/users/auth.schema"
 import { hashPassword } from "@/utils/password.util"
-import crypto from "node:crypto"
 
 export async function findUserById(id: string) {
     const user = await prisma.user.findUnique({

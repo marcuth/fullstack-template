@@ -6,5 +6,8 @@ module.exports = {
     trailingComma: "es5",
     printWidth: 100,
     bracketSpacing: true,
-    plugins: ["prettier-plugin-organize-imports"],
+    plugins: ["@trivago/prettier-plugin-sort-imports"],
+    importOrder: ["<THIRD_PARTY_MODULES>", "^@/(.*)$|^[./]"],
+    importOrderSeparation: true,
+    importOrderSortSpecifiers: true,
 }

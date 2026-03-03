@@ -1,5 +1,6 @@
-import { configHelper } from "@/helpers/config.helper"
 import { NextResponse } from "next/server"
+
+import { configHelper } from "@/helpers/config.helper"
 
 export async function POST() {
     const response = NextResponse.json({ message: "Sign out successful" }, { status: 200 })

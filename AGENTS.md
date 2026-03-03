@@ -22,6 +22,7 @@ Este projeto é um **Boilerplate Fullstack** moderno, focado em escalabilidade, 
 - **Exports:** Componentes de página ou componentes principais de arquivos devem ser exportados como `default`.
 - **Tipagem:** A menos que a tipagem precise ser exportada, nomeie-a apenas como `Props`.
 - **Nomenclatura:** Arquivos devem usar `kebab-case.tsx`.
+- **Ícones:** Utilize preferencialmente a biblioteca **Lucide** através do pacote `react-icons/lu`.
 
 ### 2. Organização de Arquivos (`src/`)
 

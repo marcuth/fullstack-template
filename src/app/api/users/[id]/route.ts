@@ -1,8 +1,9 @@
+import { NextResponse } from "next/server"
+
 import { UserRole } from "@/generated/prisma/client"
 import { AuthenticatedUser, authMiddleware, handleRouteError } from "@/helpers/auth.helper"
 import { signUpSchema } from "@/schemas/users/auth.schema"
 import { deleteUser, findUserById, updateUser } from "@/services/user.service"
-import { NextResponse } from "next/server"
 
 // Schema for PATCH, all fields optional
 const patchUserSchema = signUpSchema.partial()

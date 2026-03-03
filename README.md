@@ -74,6 +74,9 @@ Para manter a aplicação leve e única em termos de design, este projeto foi pr
 >
 > 🔗 **[https://ui.shadcn.com/create](https://ui.shadcn.com/create)**
 
+### 🎨 Ícones
+Neste projeto, utilizamos o **`react-icons`**, priorizando a biblioteca **Lucide** (`react-icons/lu`) para manter a consistência visual.
+
 ## 📜 Convenções e Arquitetura
 
 Este projeto segue regras estritas de arquitetura e qualidade de código documentadas no arquivo [`AGENTS.md`](./AGENTS.md).

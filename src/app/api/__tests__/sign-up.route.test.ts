@@ -1,6 +1,7 @@
-import * as authService from "@/services/auth.service"
 import { beforeEach, describe, expect, it, vi } from "vitest"
+
 import { POST } from "../auth/sign-up/route"
+import * as authService from "@/services/auth.service"
 
 vi.mock("@/services/auth.service", () => ({
     signUp: vi.fn(),

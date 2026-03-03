@@ -1,5 +1,6 @@
 import { env } from "@marcuth/env"
 import { PrismaBetterSqlite3 } from "@prisma/adapter-better-sqlite3"
+
 /* Descomente esta seção se você for usar PostgreSQL
 import { PrismaPg } from "@prisma/adapter-pg"
 import { Pool } from "pg"

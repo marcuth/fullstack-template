@@ -1,8 +1,9 @@
+import { NextResponse } from "next/server"
+
 import { UserRole } from "@/generated/prisma/client"
 import { authMiddleware, handleRouteError } from "@/helpers/auth.helper"
 import { signUpSchema } from "@/schemas/users/auth.schema"
 import { createUser, findAllUsers } from "@/services/user.service"
-import { NextResponse } from "next/server"
 
 export async function GET(request: Request) {
     try {

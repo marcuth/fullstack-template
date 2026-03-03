@@ -1,6 +1,7 @@
+import { NextResponse } from "next/server"
+
 import { authMiddleware, handleRouteError } from "@/helpers/auth.helper"
 import { findUserById } from "@/services/user.service"
-import { NextResponse } from "next/server"
 
 export async function GET(request: Request) {
     try {

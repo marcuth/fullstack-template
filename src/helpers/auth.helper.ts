@@ -1,6 +1,7 @@
-import { verifyToken } from "@/utils/jwt.util"
 import { NextResponse } from "next/server"
 import { ZodError } from "zod"
+
+import { verifyToken } from "@/utils/jwt.util"
 
 export type AuthenticatedUser = {
     id: string

@@ -1,6 +1,7 @@
-import { tokenPayloadSchema, TokenPayloadValues } from "@/schemas/users/token.schema"
 import { env } from "@marcuth/env"
 import jwt, { SignOptions } from "jsonwebtoken"
+
+import { TokenPayloadValues, tokenPayloadSchema } from "@/schemas/users/token.schema"
 
 const JWT_PRIVATE_KEY = env("JWT_PRIVATE_KEY")
 const ACCESS_EXPIRES = env("ACCESS_SIGN_EXPIRES_IN")

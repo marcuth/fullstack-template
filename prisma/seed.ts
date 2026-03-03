@@ -1,4 +1,5 @@
 import { env } from "@marcuth/env"
+
 import { prisma } from "../src/helpers/prisma.helper"
 import { hashPassword } from "../src/utils/password.util"
 

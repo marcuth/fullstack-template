@@ -1,8 +1,9 @@
+import { NextResponse } from "next/server"
+import { ZodError } from "zod"
+
 import { configHelper } from "@/helpers/config.helper"
 import { signInSchema } from "@/schemas/users/auth.schema"
 import { signIn } from "@/services/auth.service"
-import { NextResponse } from "next/server"
-import { ZodError } from "zod"
 
 export async function POST(request: Request) {
     try {

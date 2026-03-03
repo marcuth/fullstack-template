@@ -1,8 +1,9 @@
+import { cookies } from "next/headers"
+import { NextResponse } from "next/server"
+
 import { configHelper } from "@/helpers/config.helper"
 import { refreshTokenSchema } from "@/schemas/users/auth.schema"
 import { refresh } from "@/services/auth.service"
-import { cookies } from "next/headers"
-import { NextResponse } from "next/server"
 
 export async function POST(request: Request) {
     try {
