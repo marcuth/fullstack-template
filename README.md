@@ -103,6 +103,13 @@ Neste projeto, utilizamos o **`react-icons`**, priorizando a biblioteca **Lucide
 
 Este projeto segue regras estritas de arquitetura e qualidade de código documentadas no arquivo [`AGENTS.md`](./AGENTS.md).
 
+## 🔍 SEO e Melhores Práticas
+
+Este repositório inclui um guia completo com dicas de SEO, baseado no artigo de **Daniel Lima**:
+🔗 **[Melhor Guia de SEO para Dev](https://www.tabnews.com.br/daniellimae/melhor-guia-do-seo-para-dev-usando-codigo-para-aumentar-sua-visualizacao-organica)**.
+
+Você pode encontrar o guia localmente em [`SEO-SKILLS.md`](./SEO-SKILLS.md).
+
 **Destaques:**
 
 - Indentação de 4 espaços.
