@@ -5,9 +5,7 @@ type Props = {
 }
 
 const Providers: FC<Props> = ({ children }) => {
-    return (
-        <>{children}</>
-    )
+    return <>{children}</>
 }
 
 export default Providers

@@ -5,10 +5,34 @@
 // Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
 
 generator client {
-  provider = "prisma-client"
-  output   = "../src/generated/prisma"
+    provider     = "prisma-client"
+    moduleFormat = "cjs"
+    output       = "../src/generated/prisma"
 }
 
 datasource db {
-  provider = "postgresql"
+    // Para SQLite (Padrão)
+    provider = "sqlite"
+
+    // Para PostgreSQL (Comente o SQLite acima e descomente abaixo)
+    // provider = "postgresql"
+}
+
+enum UserRole {
+    ADMIN
+    USER
+}
+
+model User {
+    id        String    @id @default(uuid())
+    createdAt DateTime  @default(now()) @map("created_at")
+    updatedAt DateTime? @updatedAt @map("updated_at")
+    name      String
+    role      UserRole  @default(USER)
+    email     String    @unique
+    username  String    @unique
+    apiKey    String    @unique @map("api_key")
+    password  String
+
+    @@map("users")
 }

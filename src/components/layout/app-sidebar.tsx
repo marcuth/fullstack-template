@@ -1,9 +1,7 @@
 import { FC } from "react"
 
 const AppSidebar: FC = () => {
-    return (
-        <></>
-    )
+    return <></>
 }
 
 export default AppSidebar

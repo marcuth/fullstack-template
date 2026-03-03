@@ -1,36 +1,96 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Next.js Boilerplate (v2)
 
-## Getting Started
+Boilerplate moderno focado em alta performance, produtividade e padronização. Desenvolvido para servir como base sólida para aplicações Next.js escaláveis.
 
-First, run the development server:
+## 🛠 Pré-requisitos
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Node.js 18+
+- Instância de PostgreSQL (Docker ou local)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🗄️ Database Setup
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Este projeto vem configurado por padrão com **SQLite** para facilitar o desenvolvimento inicial.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Opção A: Usando SQLite (Padrão)
 
-## Learn More
+O projeto já está pronto para uso. Basta rodar os comandos de banco mencionados abaixo.
 
-To learn more about Next.js, take a look at the following resources:
+### Opção B: Migrando para PostgreSQL
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Se você decidir usar PostgreSQL em vez de SQLite, siga estes passos:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. **Desinstalar o adaptador SQLite:**
+    ```bash
+    npm uninstall @prisma/adapter-better-sqlite3
+    ```
+2. **Instalar dependências do PostgreSQL:**
+    ```bash
+    npm install pg @prisma/adapter-pg
+    npm install -D @types/pg
+    ```
+3. **Ajustar o `prisma/schema.prisma`:**
+   No arquivo `prisma/schema.prisma`, comente as linhas do SQLite e descomente as do PostgreSQL no bloco `datasource db`.
+4. **Modificar o `src/helpers/prisma.helper.ts`:**
+   Siga as instruções comentadas dentro do arquivo para trocar o adaptador do SQLite pelo adaptador do PostgreSQL.
 
-## Deploy on Vercel
+5. **Atualizar Variáveis de Ambiente:**
+   Certifique-se de que seu `.env` contém uma `DATABASE_URL` válida para PostgreSQL.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🏎 Começando
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. **Instalar dependências:**
+
+    ```bash
+    npm install
+    ```
+
+2. **Configurar variáveis de ambiente:**
+   Renomeie o `.env.example` para `.env` e preencha as credenciais do banco de dados.
+
+3. **Configurar o Banco de Dados:**
+
+    ```bash
+    npm run db:generate
+    npm run db:migrate:dev
+    ```
+
+4. **Interface Visual (Opcional):**
+
+    ```bash
+    npm run db:studio
+    ```
+
+5. **Iniciar servidor de desenvolvimento:**
+    ```bash
+    npm run dev
+    ```
+
+## 🎨 Interface e Shadcn/UI
+
+Para manter a aplicação leve e única em termos de design, este projeto foi projetado para utilizar o **shadcn/ui via CLI**.
+
+> [!IMPORTANT]
+> **NÃO** reutilize componentes e estilos de projetos anteriores mecanicamente. Para cada novo projeto, utilize o **shadcn/ui create** para fazer o setup inicial dos componentes base. Isso evita que todos os seus projetos tenham exatamente a mesma aparência e permite personalização total desde o início:
+>
+> 🔗 **[https://ui.shadcn.com/create](https://ui.shadcn.com/create)**
+
+## 📜 Convenções e Arquitetura
+
+Este projeto segue regras estritas de arquitetura e qualidade de código documentadas no arquivo [`AGENTS.md`](./AGENTS.md).
+
+**Destaques:**
+
+- Indentação de 4 espaços.
+- Sem ponto e vírgula (`;`).
+- Aspas duplas (`"`).
+- Uso da palavra-chave `function` para funções utilitárias.
+
+## 🤖 Scripts Úteis
+
+- `npm run format`: Formata todo o código com Prettier.
+- `npm run lint:fix`: Corrige problemas de linting automaticamente.
+- `npm run db:seed:dev`: Popula o banco com dados de teste usando `tsx`.
+
+---
+
+Feito com ❤️ por Marcuth.

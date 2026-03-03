@@ -1,9 +1,7 @@
 import { FC } from "react"
 
 const AppFooter: FC = () => {
-    return (
-        <></>
-    )
+    return <></>
 }
 
 export default AppFooter

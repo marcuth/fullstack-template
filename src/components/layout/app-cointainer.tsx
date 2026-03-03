@@ -1,9 +1,7 @@
 import { FC } from "react"
 
 const AppContainer: FC = () => {
-    return (
-        <></>
-    )
+    return <></>
 }
 
 export default AppContainer
