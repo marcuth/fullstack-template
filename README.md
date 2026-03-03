@@ -77,7 +77,12 @@ O projeto inclui suporte completo a Docker para desenvolvimento e produção.
 - **`Dockerfile`**: Build multi-estágio otimizado para produção usando `standalone` output do Next.js.
 - **`docker-compose.yml`**: Orquestra a aplicação e um banco de dados PostgreSQL.
 
-Para iniciar o ambiente completo:
+Para iniciar o ambiente com **PostgreSQL**:
+```bash
+docker-compose --profile postgres up --build
+```
+
+Para iniciar apenas a aplicação usando **SQLite** (padrão do .env):
 ```bash
 docker-compose up --build
 ```

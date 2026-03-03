@@ -9,13 +9,18 @@ services:
     ports:
       - "3000:3000"
     environment:
-      - DATABASE_URL=postgresql://${DB_USER:-postgres}:${DB_PASSWORD:-password}@db:5432/${DB_NAME:-fullstack}?schema=public
-      - JWT_PRIVATE_KEY=${JWT_PRIVATE_KEY:-change-me-at-all-costs-very-secret}
-      - ACCESS_SIGN_EXPIRES_IN=15m
-      - REFRESH_SIGN_EXPIRES_IN=7d
+      - DATABASE_URL=${DATABASE_URL}
+      - JWT_PRIVATE_KEY=${JWT_PRIVATE_KEY}
+      - ACCESS_SIGN_EXPIRES_IN=${ACCESS_SIGN_EXPIRES_IN:-15m}
+      - REFRESH_SIGN_EXPIRES_IN=${REFRESH_SIGN_EXPIRES_IN:-7d}
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - /app/.next
     depends_on:
       db:
         condition: service_healthy
+        required: false
 
   db:
     image: postgres:15-alpine
@@ -33,6 +38,9 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
+    # Only starts if we are not using SQLite (manual check or just let it run)
+    profiles:
+      - postgres
 
 volumes:
   postgres_data:
