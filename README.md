@@ -84,11 +84,22 @@ Este projeto segue regras estritas de arquitetura e qualidade de código documen
 - Sem ponto e vírgula (`;`).
 - Aspas duplas (`"`).
 - Uso da palavra-chave `function` para funções utilitárias.
+- **Backend Automático:** Utilize o comando `npm run ci` antes de cada commit importante para garantir que o projeto permanece estável.
+
+## 🛣️ Rotas de API Implementadas
+
+- `GET /api/auth/me` - Retorna os dados do usuário logado (token JWT).
+- `GET /api/users` - Lista todos os usuários (Apenas Admin).
+- `POST /api/users` - Cria um novo usuário (Apenas Admin).
+- `GET /api/users/{id}` - Busca um usuário por ID (Admin ou o próprio Usuário).
+- `PATCH /api/users/{id}` - Atualiza um usuário por ID (Admin ou o próprio Usuário).
+- `DELETE /api/users/{id}` - Deleta um usuário por ID (Admin ou o próprio Usuário).
 
 ## 🤖 Scripts Úteis
 
 - `npm run format`: Formata todo o código com Prettier.
 - `npm run lint:fix`: Corrige problemas de linting automaticamente.
+- `npm run ci`: Executa o fluxo completo de CI local (lint, format e testes com coverage).
 - `npm run db:seed:dev`: Popula o banco com dados de teste usando `tsx`.
 
 ---

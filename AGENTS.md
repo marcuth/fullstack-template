@@ -90,8 +90,8 @@ Ao trabalhar neste projeto, siga estas regras:
 2. **Modularização:** Se um componente começar a crescer demais, extraia sub-componentes usando o padrão de composição.
 3. **Padrão de Funções:** Para utilitários e lógica geral, utilize a palavra-chave `function` em vez de `const`.
 4. **Qualidade do Código:** Sempre que realizar alterações, você deve:
-    - Executar `npm run format` para garantir que o código segue o padrão de 4 espaços, sem `;` e com aspas duplas.
-    - Executar `npm run lint` e `npm run lint:fix` para garantir a consistência e regras do projeto.
+    - Executar `npm run ci` regularmente para garantir que o lint, format e os testes estão passando.
+    - O script `ci` é o padrão ouro para validação local antes de commits ou deploys.
 5. **Prisma:** O cliente do Prisma é gerado em `src/generated/prisma`. Use-o para interações com o banco de dados.
 6. **Tailwind 4:** Use as novas funcionalidades do Tailwind 4. Evite CSS arbitrário se houver uma utilidade nativa.
 7. **Clean Code:** Mantenha as funções pequenas, use nomes descritivos e siga o princípio de responsabilidade única.
