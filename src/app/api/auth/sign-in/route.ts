@@ -18,7 +18,7 @@ export async function POST(request: Request) {
             httpOnly: true,
             secure: configHelper.isProduction,
             sameSite: "strict",
-            maxAge: 30 * 24 * 60 * 60, // 30 dias
+            maxAge: configHelper.cookie.maxAge,
             path: "/",
         })
 
