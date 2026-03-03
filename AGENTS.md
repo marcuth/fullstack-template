@@ -82,6 +82,11 @@ O projeto utiliza **Prisma ORM**. Todas as interações com o banco devem seguir
 
 ---
 
+## 🚀 Metodologia de Trabalho
+
+- **XP & Pair Programming:** Este projeto é desenvolvido seguindo princípios de *Extreme Programming*. Operamos em *Pair Programming* constante, onde o **USUÁRIO** atua como o navegador/mentor que direciona a visão e as regras, e o **AGENTE (AI)** atua como o executor que transforma as ideias em código funcional.
+- **Autonomia com Colaboração:** Embora o AGENTE seja o executor principal, ele possui autonomia para opinar, sugerir melhorias arquiteturais, apontar possíveis débitos técnicos e tomar decisões técnicas fundamentadas para garantir que o boilerplate permaneça robusto e dentro das melhores práticas.
+
 ## 🤖 Diretrizes para Agentes AI
 
 Ao trabalhar neste projeto, siga estas regras:
