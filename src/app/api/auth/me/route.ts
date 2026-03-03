@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server"
+
 import { authMiddleware, handleRouteError } from "@/helpers/auth.helper"
 import { findUserById } from "@/services/user.service"
 
