@@ -1,6 +1,6 @@
 # 🚀 Next.js Boilerplate (v2)
 
-Boilerplate moderno focado em alta performance, produtividade e padronização. Desenvolvido para servir como base sólida para aplicações Next.js escaláveis.
+Template fullstack moderno e **opinado**, focado em alta performance, produtividade e padronização. Desenvolvido para servir como base sólida para aplicações Next.js escaláveis.
 
 ## 🛠 Pré-requisitos
 
