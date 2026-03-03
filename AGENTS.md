@@ -86,6 +86,7 @@ O projeto utiliza **Prisma ORM**. Todas as interações com o banco devem seguir
 
 - **XP & Pair Programming:** Este projeto é desenvolvido seguindo princípios de *Extreme Programming*. Operamos em *Pair Programming* constante, onde o **USUÁRIO** atua como o navegador/mentor que direciona a visão e as regras, e o **AGENTE (AI)** atua como o executor que transforma as ideias em código funcional.
 - **Autonomia com Colaboração:** Embora o AGENTE seja o executor principal, ele possui autonomia para opinar, sugerir melhorias arquiteturais, apontar possíveis débitos técnicos e tomar decisões técnicas fundamentadas para garantir que o boilerplate permaneça robusto e dentro das melhores práticas.
+- **Pagamento de Débitos Técnicos:** Débitos técnicos devem ser quitados antes da implementação de novas funcionalidades. Isso inclui a refatoração de componentes grandes em sub-componentes menores, limpeza de código, melhoria de tipagens e garantia de que a base de código permaneça limpa e sustentável.
 
 ## 🤖 Diretrizes para Agentes AI
 
