@@ -65,6 +65,23 @@ Se você decidir usar PostgreSQL em vez de SQLite, siga estes passos:
     npm run dev
     ```
 
+6. **Executar via Docker (Opcional):**
+    ```bash
+    docker-compose up -d
+    ```
+
+## 🐳 Docker
+
+O projeto inclui suporte completo a Docker para desenvolvimento e produção.
+
+- **`Dockerfile`**: Build multi-estágio otimizado para produção usando `standalone` output do Next.js.
+- **`docker-compose.yml`**: Orquestra a aplicação e um banco de dados PostgreSQL.
+
+Para iniciar o ambiente completo:
+```bash
+docker-compose up --build
+```
+
 ## 🎨 Interface e Shadcn/UI
 
 Para manter a aplicação leve e única em termos de design, este projeto foi projetado para utilizar o **shadcn/ui via CLI**.

@@ -107,6 +107,7 @@ Ao trabalhar neste projeto, siga estas regras:
     - Utilize o **Vitest** como runner de testes.
     - Testes devem ser escritos a cada nova implementação de serviço, utilitário ou lógica de negócio relevante.
     - Utilize os comandos `npm run test` ou `npm run test:coverage` para validar a implementação.
+9. **Docker:** O projeto utiliza builds multi-estágio e `standalone` output no Dockerfile para otimização de imagem. O `docker-compose.yml` já configura o ambiente com PostgreSQL.
 
 ---
 
